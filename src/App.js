@@ -8,7 +8,9 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleFindAndReplace = (findText, replaceText) => {
-    debugger;
+    alert(
+      `Replacing ${findText} with ${replaceText}. This action is irreversible.`
+    );
     const updatedText = text.split(findText).join(replaceText);
     setText(updatedText);
   };
