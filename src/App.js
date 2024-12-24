@@ -6,7 +6,6 @@ import "./App.css";
 function App() {
   const [text, setText] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [counter, setCounter] = useState(0);
 
   const handleFindAndReplace = (findText, replaceText) => {
     debugger;
