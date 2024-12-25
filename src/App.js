@@ -11,8 +11,11 @@ function App() {
     alert(
       `Replacing ${findText} with ${replaceText}. This action is irreversible.`
     );
-    const updatedText = text.split(findText).join(replaceText);
-    setText(updatedText);
+    if (findText) {
+      const regex = new RegExp(`\\b${findText}\\b`, "gi"); // Case-insensitive global search
+      const updatedText = text.replace(regex, replaceText);
+      setText(updatedText);
+    }
   };
 
   return (
